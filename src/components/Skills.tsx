@@ -13,12 +13,6 @@ import { Badge } from "@/components/ui/badge";
 
 /**
  * Skills Data Interface
- * 
- * TODO: Provide your skills for each category
- * Each category should have:
- * - title: Category name (e.g., "Languages", "Frontend")
- * - icon: Lucide icon component
- * - skills: Array of skill strings
  */
 interface SkillCategory {
   title: string;
@@ -26,53 +20,36 @@ interface SkillCategory {
   skills: string[];
 }
 
-/**
- * TODO: Replace placeholder skills with your actual skills
- * 
- * Please provide the following:
- * 1. Programming Languages (e.g., JavaScript, TypeScript, Python, Java, C++)
- * 2. Frontend Technologies (e.g., React, Vue, Angular, HTML, CSS, Tailwind)
- * 3. Backend Technologies (e.g., Node.js, Express, Spring Boot, Django)
- * 4. Databases (e.g., PostgreSQL, MySQL, MongoDB, Firebase)
- * 5. Cloud & DevOps (e.g., AWS, GCP, Azure, Docker, Kubernetes)
- * 6. Tools (e.g., Git, VS Code, Figma, Postman)
- */
 const skillCategories: SkillCategory[] = [
   {
     title: "Languages",
     icon: Code2,
-    // TODO: Add your programming languages
-    skills: ["Add your programming languages here"],
+    skills: ["Java", "Python", "Kotlin", "C", "JavaScript", "TypeScript", "SQL", "PHP", "HTML", "CSS"],
   },
   {
     title: "Frontend",
     icon: Layout,
-    // TODO: Add your frontend technologies
-    skills: ["Add your frontend technologies here"],
+    skills: ["React.js", "TypeScript", "HTML", "CSS"],
   },
   {
     title: "Backend",
     icon: Server,
-    // TODO: Add your backend technologies
-    skills: ["Add your backend technologies here"],
+    skills: ["Spring Boot", "Java", "REST API", "JWT Authentication"],
   },
   {
     title: "Databases",
     icon: Database,
-    // TODO: Add your database technologies
-    skills: ["Add your databases here"],
+    skills: ["PostgreSQL", "MySQL", "Firebase", "Firestore", "pgvector"],
   },
   {
     title: "Cloud & DevOps",
     icon: Cloud,
-    // TODO: Add your cloud and DevOps tools
-    skills: ["Add your cloud/DevOps tools here"],
+    skills: ["AWS", "Google Cloud Platform", "Cloudinary", "Firebase", "Vercel", "Render", "Docker"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    // TODO: Add your development tools
-    skills: ["Add your tools here"],
+    skills: ["Git", "Visual Studio", "XAMPP", "DBeaver", "PgAdmin", "MySQL Workbench", "WordPress"],
   },
 ];
 

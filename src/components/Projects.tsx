@@ -34,43 +34,34 @@ interface Project {
   demo?: string;
 }
 
-/**
- * TODO: Replace with your actual projects
- * 
- * Please provide for each project:
- * 1. Project name
- * 2. Brief description/subtitle
- * 3. The Challenge: What problem were you solving?
- * 4. The Solution: How did you approach solving it?
- * 5. Technical Implementation: What technologies/techniques did you use?
- * 6. Tech stack (array of technologies)
- * 7. GitHub URL (optional)
- * 8. Live demo URL (optional)
- */
 const projects: Project[] = [
   {
-    // TODO: Replace with your first project
-    title: "Project Name 1",
-    subtitle: "Brief description of what this project does",
-    challenge: "Describe the problem or challenge this project addresses.",
-    solution: "Explain your approach to solving the problem.",
-    implementation: "Detail the technical implementation and key features.",
-    techStack: ["Tech 1", "Tech 2", "Tech 3"],
-    github: undefined, // TODO: Add your GitHub URL
-    demo: undefined, // TODO: Add your demo URL
+    title: "Civilify",
+    subtitle: "AI-powered legal assistant providing accurate Philippine legal information and case plausibility assessments",
+    challenge: "Accessing accurate Philippine legal information and assessing case plausibility requires extensive legal knowledge and research, which can be time-consuming and inaccessible for many individuals.",
+    solution: "Built an AI-powered legal assistant using retrieval-augmented generation (RAG) to provide accurate Philippine legal information and case plausibility assessments through natural language queries.",
+    implementation: "Engineered a full-stack application with React 18 frontend, Spring Boot backend with JWT authentication, Firebase Firestore for conversations, and PostgreSQL with pgvector for semantic search of 1,500+ Philippine legal provisions including the Constitution, Civil Code, Revised Penal Code, and Rules of Court.",
+    techStack: ["Spring Boot", "React", "Firebase", "PostgreSQL", "pgvector", "JWT"],
+    github: "https://github.com/keithruezyl1/CivilifyG48",
   },
   {
-    // TODO: Replace with your second project
-    title: "Project Name 2",
-    subtitle: "Brief description of what this project does",
-    challenge: "Describe the problem or challenge this project addresses.",
-    solution: "Explain your approach to solving the problem.",
-    implementation: "Detail the technical implementation and key features.",
-    techStack: ["Tech 1", "Tech 2", "Tech 3"],
-    github: undefined, // TODO: Add your GitHub URL
-    demo: undefined, // TODO: Add your demo URL
+    title: "SPOT",
+    subtitle: "Comprehensive classroom management and attendance tracking platform with QR codes and facial recognition",
+    challenge: "Managing classroom seating arrangements, tracking attendance manually, and generating analytics reports is inefficient and time-consuming for educators.",
+    solution: "Built a comprehensive multi-platform classroom management system enabling teachers to manage digital seating arrangements, track attendance via QR codes and facial recognition, and generate analytics reports.",
+    implementation: "Engineered a full-stack multi-platform application using React/TypeScript with Shadcn UI for the web frontend, Spring Boot with Java for the REST API backend, MySQL for data persistence, and native Android (Kotlin) for the mobile app, featuring JWT authentication and Google OAuth integration.",
+    techStack: ["React", "TypeScript", "Spring Boot", "MySQL", "Android", "Kotlin", "JWT", "Google OAuth"],
+    github: "https://github.com/bardatt1/IT342-SPOT",
   },
-  // TODO: Add more projects as needed
+  {
+    title: "FinApp",
+    subtitle: "Full-featured e-commerce platform for premium apparel shopping tailored for the Philippine market",
+    challenge: "Creating a seamless e-commerce experience for premium apparel shopping in the Philippines requires proper authentication, shopping cart management, order processing, and localized shipping support.",
+    solution: "Built a complete full-featured e-commerce platform with comprehensive shopping cart management, order processing with cancellation capabilities, role-based access control, and Philippine-localized shipping.",
+    implementation: "Engineered a complete full-stack application using React for the frontend, Spring Boot with Spring Security for the backend, and MySQL for the database, featuring JWT authentication, shopping cart management, order processing with cancellation capabilities, role-based access control (admin/user), and Philippine-localized shipping with barangay-level address support.",
+    techStack: ["React", "Spring Boot", "Spring Security", "MySQL", "JWT"],
+    github: "https://github.com/bardatt1/FinApp",
+  },
 ];
 
 const containerVariants = {
@@ -207,16 +198,19 @@ export function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6"
+          className="flex flex-wrap justify-center gap-6"
         >
           {projects.map((project) => (
-            <motion.div key={project.title} variants={itemVariants}>
+            <motion.div 
+              key={project.title} 
+              variants={itemVariants}
+              className="w-full md:w-[calc(50%-12px)] lg:max-w-lg"
+            >
               <ProjectCard project={project} />
             </motion.div>
           ))}
         </motion.div>
 
-        {/* TODO: Add your GitHub profile link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -224,12 +218,8 @@ export function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          {/* 
-            TODO: Replace "#" with your actual GitHub profile URL
-            Example: href="https://github.com/yourusername"
-          */}
           <a
-            href="#"
+            href="https://github.com/bardatt1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-lg font-medium text-primary hover:underline transition-all"

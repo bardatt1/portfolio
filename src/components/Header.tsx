@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X, Code2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -90,9 +90,15 @@ export function Header() {
             <ThemeToggle />
             <Button
               className="ml-2"
-              onClick={() => scrollToSection("#connect")}
+              asChild
             >
-              Let's Connect
+              <a
+                href="/Resume-Arda_BrettWestley 2025.pdf"
+                download="Resume-Arda_BrettWestley-2025.pdf"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Get Resume
+              </a>
             </Button>
           </motion.div>
 
@@ -137,9 +143,15 @@ export function Header() {
               ))}
               <Button
                 className="w-full mt-4"
-                onClick={() => scrollToSection("#connect")}
+                asChild
               >
-                Let's Connect
+                <a
+                  href="/Resume-Arda_BrettWestley 2025.pdf"
+                  download="Resume-Arda_BrettWestley-2025.pdf"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Get Resume
+                </a>
               </Button>
             </div>
           </motion.div>

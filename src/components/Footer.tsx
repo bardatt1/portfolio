@@ -37,12 +37,6 @@ export function Footer() {
             © {currentYear} Brett Westley A. Arda
           </p>
 
-          {/* Built with love */}
-          <p className="text-muted-foreground/60 text-xs flex items-center gap-1">
-            Built with{" "}
-            <Heart className="w-3 h-3 text-primary fill-primary animate-pulse" />{" "}
-            using React & TypeScript
-          </p>
         </motion.div>
       </div>
     </footer>

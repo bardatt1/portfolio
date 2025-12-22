@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Terminal, Sparkles, Code, Layers } from "lucide-react";
+import { Terminal, Sparkles, Code, Layers, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function About() {
@@ -127,38 +127,20 @@ export function About() {
           <Button
             variant="outline"
             size="lg"
-            onClick={() =>
-              document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" })
-            }
+            asChild
           >
-            Get In Touch
+            <a
+              href="/Resume-Arda_BrettWestley 2025.pdf"
+              download="Resume-Arda_BrettWestley-2025.pdf"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Get Resume
+            </a>
           </Button>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center gap-2 text-muted-foreground"
-          >
-            <span className="text-xs font-medium tracking-wider uppercase">Scroll</span>
-            <div className="w-5 h-8 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="w-1 h-2 bg-primary rounded-full"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
+        
       </div>
     </section>
   );
 }
-

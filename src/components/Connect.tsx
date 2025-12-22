@@ -20,53 +20,31 @@ interface ContactItem {
   link: string | null;
 }
 
-/**
- * TODO: Replace with your actual contact information
- * 
- * Please provide:
- * 1. Your email address
- * 2. Your location (city, country)
- * 3. Your GitHub profile URL
- * 4. Your LinkedIn profile URL
- * 5. Any other social media profiles (Twitter, etc.)
- */
 const contactInfo: ContactItem[] = [
   {
     icon: Mail,
     label: "Email",
-    // TODO: Replace with your email
-    value: "your.email@example.com",
-    link: "mailto:your.email@example.com", // TODO: Update mailto link
+    value: "brettarda123@gmail.com",
+    link: "mailto:brettarda123@gmail.com",
   },
   {
     icon: MapPin,
     label: "Location",
-    // TODO: Replace with your location
     value: "Cebu City, Philippines",
     link: null,
   },
   {
     icon: Github,
     label: "GitHub",
-    // TODO: Replace with your GitHub username
-    value: "github.com/yourusername",
-    link: "https://github.com/yourusername", // TODO: Update GitHub link
+    value: "github.com/bardatt1",
+    link: "https://github.com/bardatt1",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    // TODO: Replace with your LinkedIn name
     value: "Brett Westley A. Arda",
-    link: "https://linkedin.com/in/yourusername", // TODO: Update LinkedIn link
+    link: "https://www.linkedin.com/in/brett-westley-arda-318167395/", // LinkedIn URL not provided in resume
   },
-  // TODO: Add more social links as needed
-  // Uncomment and configure if you have Twitter:
-  // {
-  //   icon: Twitter,
-  //   label: "Twitter",
-  //   value: "@yourusername",
-  //   link: "https://twitter.com/yourusername",
-  // },
 ];
 
 const containerVariants = {
@@ -174,8 +152,7 @@ export function Connect() {
             size="lg"
             asChild
           >
-            {/* TODO: Update with your actual email */}
-            <a href="mailto:your.email@example.com">
+            <a href="mailto:brettarda123@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
               Send me an email
             </a>
